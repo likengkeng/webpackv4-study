@@ -109,6 +109,19 @@ module.exports = {
           'postcss-loader', // 使用 postcss 为 css 加上浏览器前缀
           'sass-loader' // 使用 sass-loader 将 scss 转为 css
         ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|jfif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name]-[hash:5].min.[ext]',
+              outputPath: 'images/', // 输出到imgages文件夹
+              limit: 30000 // 把小于30kb的文件转成Base64的格式
+            }
+          }
+        ]
       }
     ]
   }

@@ -15,7 +15,7 @@
 // });
 
 import './css/base.css';
-import './scss/main.scss';
+// import './scss/main.scss';
 
 document.addEventListener('click', () => {
   // webpackPrefetch: true 会等你主要的 JS 都加载完了之后，网络带宽空闲的时候，它就会预先帮你加载好

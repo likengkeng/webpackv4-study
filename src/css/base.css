@@ -4,5 +4,25 @@ body {
   padding: 0;
 }
 html {
-  background: #eeee33;
+  background: #f1f1ef;
+}
+.box {
+  height: 400px;
+  width: 400px;
+  border: 5px solid #000;
+  color: #000;
+}
+.box div {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.box .ani1 {
+  background: url('../assets/imgs/cat.jfif') no-repeat;
+}
+.box .ani2 {
+  background: url('../assets/imgs/flower.jfif') no-repeat;
+}
+.box .ani3 {
+  background: url('../assets/imgs/gitar.jfif') no-repeat;
 }
