@@ -23,3 +23,5 @@ document.addEventListener('click', () => {
     func();
   })
 });
+
+$('.box').addClass('container');

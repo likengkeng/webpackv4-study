@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 引入插件
@@ -14,6 +15,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js', // 代码打包后的文件名
     chunkFilename: '[name].js' // 代码拆分后的文件名
+  },
+  resolve: {
+    alias: {
+      $: path.resolve(__dirname, 'node-modules/dist/jquery.min.js')
+    }
   },
   optimization: {
     // 代码分割
@@ -81,6 +87,10 @@ module.exports = {
       cssProcessor: require('cssnano'), //用于优化\最小化 CSS 的 CSS处理器，默认为 cssnano
       cssProcessorOptions: { safe: true, discardComments: { removeAll: true } }, //传递给 cssProcessor 的选项，默认为{}
       canPrint: true //布尔值，指示插件是否可以将消息打印到控制台，默认为 true
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery', // npm
+      // jQuery: 'jQuery' // 本地Js文件
     })
   ],
   module: {
