@@ -15,7 +15,7 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/runtime": "^7.9.2",
     "core-js": "3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
